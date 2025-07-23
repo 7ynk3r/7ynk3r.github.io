@@ -5,7 +5,7 @@ date: 2025-07-22
 description: "How AI is accelerating the evolution of senior IC roles and blurring the line between individual contributors and managers"
 ---
 
-The role of the senior IC (Individual Contributor) is evolving fast—and AI is
+The role of the IC (Individual Contributor) is evolving fast—and AI is
 accelerating the shift. As AI tools become deeply integrated into development
 workflows, many engineers find themselves stepping into responsibilities once
 reserved for engineering managers. This isn't a hypothetical trend—it's already
