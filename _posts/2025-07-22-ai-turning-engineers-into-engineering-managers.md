@@ -47,12 +47,12 @@ invisible teams—directing agents rather than mentoring junior engineers. It's 
 powerful shift, but it introduces fragility. You may ship faster, but you may
 also debug slower.
 
-When a staff engineer can scope projects, coordinate execution, and make
-high-level trade-offs—without managerial title—it forces a rethink of org
-structures. Some startups and FAANG teams already operate with staff+ ICs
-handling what used to be EM work, minus the direct reports.
+When an engineer can scope projects, coordinate execution, and make high-level
+trade-offs—without managerial title—it forces a rethink of org structures. Some
+startups already operate with ICs handling what used to be EM work, minus the
+direct reports.
 
-## What's Still EM-Only (for Now)
+## What's Still EM-Only (for now)
 
 Yet, even as AI shifts power toward ICs, there are elements of the EM role that
 remain uniquely human and context-bound. Performance management, for instance,
