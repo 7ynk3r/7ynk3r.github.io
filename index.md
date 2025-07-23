@@ -8,6 +8,7 @@ title: Home
 This is where I share my thoughts, experiences, and insights about technology,
 life, and everything in between.
 
+<br/>
 ## Recent Posts
 
 {% for post in site.posts limit:5 %}

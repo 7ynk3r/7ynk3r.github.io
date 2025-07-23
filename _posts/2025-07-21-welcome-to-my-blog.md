@@ -8,11 +8,11 @@ author: "Juan Rodriguez"
 
 # Hey there, and welcome!
 
-I'm JM, and I'm genuinely excited to kick off this new chapter—my own corner of
-the internet where curiosity, code, and creativity meet. After a break, I'm
-revamping my writing side and diving back into sharing ideas and stories.
-Whether you’re a fellow developer, a tech enthusiast, or just someone who loves
-learning, I’m glad you’re here.
+I'm genuinely excited to kick off this new chapter—my own corner of the internet
+where curiosity, code, and creativity meet. After a break, I'm revamping my
+writing side and diving back into sharing ideas and stories. Whether you’re a
+fellow developer, a tech enthusiast, or just someone who loves learning, I’m
+glad you’re here.
 
 ## Why this blog?
 
