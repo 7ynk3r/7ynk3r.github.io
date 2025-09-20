@@ -9,9 +9,6 @@ layout: default
             <time datetime="{{ page.date | date_to_xmlschema }}">
                 {{ page.date | date: "%B %d, %Y" }}
             </time>
-            {% if page.author %}
-            <span class="author">by {{ page.author }}</span>
-            {% endif %}
         </div>
     </header>
 

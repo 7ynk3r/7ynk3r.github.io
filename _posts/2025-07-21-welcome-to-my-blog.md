@@ -3,7 +3,6 @@ layout: post
 title: "Welcome"
 date: 2025-07-21
 description: "My first blog post introducing this new site"
-author: "Juan Rodriguez"
 ---
 
 # Hey there, and welcome!
