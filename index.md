@@ -3,12 +3,15 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Blog
+# Welcome!
 
-This is where I share my thoughts, experiences, and insights about technology,
-life, and everything in between.
+Here I explore how AI is reshaping software development, share insights from
+building systems at scale, and dive into the evolving landscape of engineering
+leadership.
 
-<br/>
+Whether you're navigating the shift from IC to management, adapting to
+AI-powered development workflows, or just curious about the future of tech,
+you'll find practical insights and honest perspectives here.
 
 {% for post in site.posts limit:5 %}
 
@@ -18,9 +21,6 @@ life, and everything in between.
         <time datetime="{{ post.date | date_to_xmlschema }}">
             {{ post.date | date: "%B %d, %Y" }}
         </time>
-        {% if post.author %}
-        <span class="author">by {{ post.author }}</span>
-        {% endif %}
     </div>
     {% if post.description %}
     <div class="excerpt">

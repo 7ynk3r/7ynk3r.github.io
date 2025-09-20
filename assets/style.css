@@ -65,6 +65,36 @@ main {
     padding: 2rem 0;
 }
 
+/* Homepage specific styles */
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+main > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Main content lists (for About page and similar) */
+main ul,
+main ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    margin-left: 0;
+    list-style-position: outside;
+}
+
+main li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+    padding-left: 0;
+}
+
 /* Post styles */
 .post {
     background: #fff;
@@ -78,6 +108,7 @@ main {
 
 .post-header {
     margin-bottom: 2rem;
+    padding-left: 1rem;
 }
 
 .post-title {
@@ -98,13 +129,28 @@ main {
 .post-content {
     font-size: 1.1rem;
     line-height: 1.8;
+    color: #444;
 }
 
-.post-content h1,
-.post-content h2,
-.post-content h3 {
+.post-content h1 {
+    font-size: 2.25rem;
+    margin: 2.5rem 0 1.5rem 0;
+    color: #222;
+    font-weight: 700;
+}
+
+.post-content h2 {
+    font-size: 1.75rem;
     margin: 2rem 0 1rem 0;
     color: #333;
+    font-weight: 600;
+}
+
+.post-content h3 {
+    font-size: 1.375rem;
+    margin: 1.5rem 0 0.75rem 0;
+    color: #444;
+    font-weight: 600;
 }
 
 .post-content p {
@@ -118,7 +164,13 @@ main {
 }
 
 .post-content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.post-content strong {
+    font-weight: 600;
+    color: #333;
 }
 
 .post-content a {
@@ -130,28 +182,58 @@ main {
     text-decoration: underline;
 }
 
+/* Read more link styling */
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
 /* Post navigation */
 .post-navigation {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid #eee;
+    gap: 1rem;
 }
 
 .post-navigation a {
     color: #007bff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     border: 1px solid #007bff;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     background-color: transparent;
+    font-weight: 500;
+    max-width: 45%;
+    text-align: center;
 }
 
 .post-navigation a:hover {
     background-color: #007bff;
     color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.post-navigation a.prev {
+    margin-right: auto;
+}
+
+.post-navigation a.next {
+    margin-left: auto;
 }
 
 /* Post footer */
@@ -188,6 +270,14 @@ main {
 
 .post-list .excerpt {
     color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 /* Footer */

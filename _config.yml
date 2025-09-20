@@ -1,7 +1,7 @@
 title: 7ynk3r
 description: A personal blog about technology and thoughts
 author: Juan Rodriguez
-email: your-email@example.com
+email: hello@7ynk3r.github.io
 url: "https://7ynk3r.github.io"
 baseurl: ""
 
@@ -25,4 +25,3 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Juan Rodriguez"
