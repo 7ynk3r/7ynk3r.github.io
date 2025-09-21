@@ -52,7 +52,7 @@ jobs:
 
             Use markdown with clear headings (##, ###), focus on actionable insights, and match JM's writing style: thoughtful, practical, and directly relevant to today's engineering challenges.
 
-            Write the complete post now, do not ask for confirmation.
+            Write the complete post now, do not ask for confirmation. Do not wrap the YAML frontmatter in code blocks.
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "latest"
           gemini_debug: false

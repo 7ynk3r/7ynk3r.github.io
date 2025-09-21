@@ -1,12 +1,9 @@
-```yaml
 ---
 layout: post
 title: "Navigating the Shifting Sands: Engineering Leadership in the Age of AI"
 date: 2025-09-21
 description: "Leading engineering teams effectively requires adapting to the rapid advancements in AI and evolving team dynamics."
 ---
-
-## Navigating the Shifting Sands: Engineering Leadership in the Age of AI
 
 The software engineering landscape is in constant flux, a churning sea of technological advancements and evolving team dynamics.  Today, the most significant current shaping this landscape is the undeniable rise of Artificial Intelligence (AI).  This isn't just about integrating AI into our products; it's fundamentally reshaping how we lead engineering teams, build systems, and even define career growth.
 
@@ -58,4 +55,3 @@ Modern development practices are crucial for navigating the complexities of AI d
 ## Conclusion: Embracing the Future
 
 The rise of AI is transforming the software engineering landscape at an unprecedented pace.  Engineering leaders who embrace change, invest in their teams, and adapt their strategies will be best positioned to succeed in this new era.  By fostering a culture of learning, collaboration, and innovation, we can harness the power of AI to build better systems and create a more fulfilling and rewarding experience for engineers.  The shifting sands may present challenges, but they also offer exciting opportunities for growth and innovation.  Let's embrace the future, together.
-```
