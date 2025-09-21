@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Building Systems & Leading Teams
+# Code, Leadership, and Real Talk
 
 Here I explore how AI is reshaping software development, share insights from
 building systems at scale, and dive into the evolving landscape of engineering
