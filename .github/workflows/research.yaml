@@ -23,7 +23,13 @@ jobs:
           gemini_model: "gemini-1.5-flash"
 
       - name: Create file with Gemini's response
-        run: echo "${{ steps.gemini_run.outputs.gemini_response }}" > ai_news.md
+        run: |
+          echo "Gemini response length: ${#GEMINI_RESPONSE}"
+          echo "Gemini response content:"
+          echo "$GEMINI_RESPONSE"
+          echo "$GEMINI_RESPONSE" > ai_news.md
+        env:
+          GEMINI_RESPONSE: ${{ steps.gemini_run.outputs.gemini_response }}
 
       - name: Verify file content
         run: |
