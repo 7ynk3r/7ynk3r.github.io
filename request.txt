@@ -1,0 +1,6 @@
+I need you to create a new blog post for my Jekyll site. Please:
+1. TODAY: @web Search online for today's calendar day. Don't run a command for this.
+1. ANALYZE: Read my about.md and recent posts in _posts/ to understand my format, style, and topics
+2. RESEARCH: @web Find current trends/news related to my usual subjects
+3. CREATE: Generate a new post following my exact format. 
+Handle the entire process end-to-end. The post should match my style perfectly.
