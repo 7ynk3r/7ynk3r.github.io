@@ -16,10 +16,10 @@ jobs:
         id: gemini_run
         uses: google-github-actions/run-gemini-cli@v0.1.12
         with:
-          prompt: "Summarize the top 3 AI news headlines from the past 48 hours in markdown format."
+          prompt: "Write a brief summary about the current state of AI development and key trends in 2025. Format the response as markdown with 3 main points."
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "latest"
-          gemini_debug: true
+          gemini_debug: false
           gemini_model: "gemini-1.5-flash"
 
       - name: Create file with Gemini's response
