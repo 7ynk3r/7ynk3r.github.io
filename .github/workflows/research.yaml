@@ -21,7 +21,7 @@ jobs:
           gemini_cli_version: "latest"
 
       - name: Create file with Gemini's response
-        run: echo "${{ steps.gemini_run.outputs.text }}" > ai_news.md
+        run: echo "${{ steps.gemini_run.outputs.gemini_response }}" > ai_news.md
 
       - name: Verify file content
         run: |
