@@ -22,14 +22,27 @@ jobs:
           gemini_debug: false
           gemini_model: "gemini-1.5-flash"
 
-      - name: Create file with Gemini's response
+      - name: Debug Gemini outputs
         run: |
-          echo "Gemini response length: ${#GEMINI_RESPONSE}"
-          echo "Gemini response content:"
-          echo "$GEMINI_RESPONSE"
-          echo "$GEMINI_RESPONSE" > ai_news.md
+          echo "=== Gemini Response ==="
+          echo "Length: ${#GEMINI_RESPONSE}"
+          echo "Content: $GEMINI_RESPONSE"
+          echo ""
+          echo "=== Gemini Errors ==="
+          echo "Length: ${#GEMINI_ERRORS}"
+          echo "Content: $GEMINI_ERRORS"
+          echo ""
+          echo "=== Creating file ==="
+          if [ -n "$GEMINI_RESPONSE" ]; then
+            echo "$GEMINI_RESPONSE" > ai_news.md
+          elif [ -n "$GEMINI_ERRORS" ]; then
+            echo "Error occurred: $GEMINI_ERRORS" > ai_news.md
+          else
+            echo "No response from Gemini CLI" > ai_news.md
+          fi
         env:
           GEMINI_RESPONSE: ${{ steps.gemini_run.outputs.gemini_response }}
+          GEMINI_ERRORS: ${{ steps.gemini_run.outputs.gemini_errors }}
 
       - name: Verify file content
         run: |
