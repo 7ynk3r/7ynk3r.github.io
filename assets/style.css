@@ -292,6 +292,19 @@ footer {
 }
 
 /* Archive page styles */
+.archive-container {
+    margin-top: 2rem;
+}
+
+.archive-year-header {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
 .archive-year {
     margin-bottom: 2rem;
 }
