@@ -30,34 +30,29 @@ jobs:
         uses: google-github-actions/run-gemini-cli@v0.1.12
         with:
           prompt: |
-            You are writing a new blog post for a software engineering blog focused on engineering leadership, AI & development, systems thinking, and team dynamics.
+            Write a complete blog post for JM's software engineering blog. Today is ${{ steps.date_info.outputs.day_of_week }}, ${{ steps.date_info.outputs.month_day }}.
 
-            CONTEXT:
-            - Today is ${{ steps.date_info.outputs.day_of_week }}, ${{ steps.date_info.outputs.month_day }}
-            - The blog author is JM, a software engineer passionate about building systems that matter and exploring how technology shapes work
-            - Recent topics include: "Hiring Engineers in the AI Era", "Is AI Turning Engineers Into Managers?"
-            - Writing style: Professional but conversational, practical insights, real-world applications
+            The blog focuses on engineering leadership, AI & development, systems thinking, and team dynamics. Recent posts covered "Hiring Engineers in the AI Era" and "Is AI Turning Engineers Into Managers?". JM writes with a professional but conversational tone, providing practical insights and real-world applications.
 
-            TASK:
-            Research and write a new blog post following this exact format:
+            Create a complete, ready-to-publish blog post starting with this exact YAML frontmatter format:
 
             ---
             layout: post
-            title: "[COMPELLING TITLE HERE]"
+            title: "Your Compelling Title Here"
             date: ${{ steps.date_info.outputs.today }}
-            description: "[BRIEF DESCRIPTION HERE]"
+            description: "Brief one-sentence description of the post"
             ---
 
-            [Write a compelling blog post that fits the author's style and topics. The post should be 800-1200 words, include practical insights, and cover current trends in engineering leadership, AI development, or systems thinking. Use markdown formatting with clear headings and engaging content.]
-
-            Focus on topics like:
+            Then write 800-1200 words covering a current trend in:
             - Engineering leadership and team dynamics
             - AI's impact on software development
             - System architecture and scalability
             - Technical career growth
             - Modern development practices
 
-            Make it highly relevant to today's engineering challenges and include specific, actionable insights.
+            Use markdown with clear headings (##, ###), focus on actionable insights, and match JM's writing style: thoughtful, practical, and directly relevant to today's engineering challenges.
+
+            Write the complete post now, do not ask for confirmation.
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "latest"
           gemini_debug: false
