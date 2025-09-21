@@ -1,10 +1,12 @@
-name: Gemini Research and Create File
+name: Create New Blog Post
 
 on:
   workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: '0 12 * * 1' # Run every Monday at 12 PM UTC (optional)
 
 jobs:
-  research:
+  create-blog-post:
     runs-on: ubuntu-latest
     permissions:
       contents: "write" # Required to commit the new file
@@ -12,47 +14,91 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Gemini CLI
+      - name: Get today's date and calendar info
+        id: date_info
+        run: |
+          TODAY=$(date '+%Y-%m-%d')
+          DAY_OF_WEEK=$(date '+%A')
+          MONTH_DAY=$(date '+%B %d')
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+          echo "day_of_week=$DAY_OF_WEEK" >> $GITHUB_OUTPUT
+          echo "month_day=$MONTH_DAY" >> $GITHUB_OUTPUT
+          echo "Today is $DAY_OF_WEEK, $MONTH_DAY ($TODAY)"
+
+      - name: Research current trends and generate blog post
         id: gemini_run
         uses: google-github-actions/run-gemini-cli@v0.1.12
         with:
-          prompt: "Write a brief summary about the current state of AI development and key trends in 2025. Format the response as markdown with 3 main points."
+          prompt: |
+            You are writing a new blog post for a software engineering blog focused on engineering leadership, AI & development, systems thinking, and team dynamics.
+
+            CONTEXT:
+            - Today is ${{ steps.date_info.outputs.day_of_week }}, ${{ steps.date_info.outputs.month_day }}
+            - The blog author is JM, a software engineer passionate about building systems that matter and exploring how technology shapes work
+            - Recent topics include: "Hiring Engineers in the AI Era", "Is AI Turning Engineers Into Managers?"
+            - Writing style: Professional but conversational, practical insights, real-world applications
+
+            TASK:
+            Research and write a new blog post following this exact format:
+
+            ---
+            layout: post
+            title: "[COMPELLING TITLE HERE]"
+            date: ${{ steps.date_info.outputs.today }}
+            description: "[BRIEF DESCRIPTION HERE]"
+            ---
+
+            [Write a compelling blog post that fits the author's style and topics. The post should be 800-1200 words, include practical insights, and cover current trends in engineering leadership, AI development, or systems thinking. Use markdown formatting with clear headings and engaging content.]
+
+            Focus on topics like:
+            - Engineering leadership and team dynamics
+            - AI's impact on software development
+            - System architecture and scalability
+            - Technical career growth
+            - Modern development practices
+
+            Make it highly relevant to today's engineering challenges and include specific, actionable insights.
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "latest"
           gemini_debug: false
           gemini_model: "gemini-1.5-flash"
 
-      - name: Create file with Gemini's response
+      - name: Create blog post file
         run: |
-          echo "=== Gemini Summary ==="
-          echo "Length: ${#GEMINI_SUMMARY}"
-          echo "Content: $GEMINI_SUMMARY"
-          echo ""
-          echo "=== Gemini Errors ==="
-          echo "Length: ${#GEMINI_ERROR}"
-          echo "Content: $GEMINI_ERROR"
-          echo ""
-          echo "=== Creating file ==="
-          if [ -n "$GEMINI_SUMMARY" ]; then
-            echo "$GEMINI_SUMMARY" > ai_news.md
-          elif [ -n "$GEMINI_ERROR" ]; then
-            echo "Error occurred: $GEMINI_ERROR" > ai_news.md
-          else
-            echo "No response from Gemini CLI" > ai_news.md
+          # Extract title from the generated content and create filename
+          TITLE_SLUG=$(echo "$GEMINI_SUMMARY" | grep '^title:' | head -1 | sed 's/title: *"//g' | sed 's/".*//g' | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9 ]//g' | tr ' ' '-' | sed 's/--*/-/g' | sed 's/^-//g' | sed 's/-$//g')
+
+          # If title extraction fails, use a fallback
+          if [ -z "$TITLE_SLUG" ] || [ ${#TITLE_SLUG} -lt 5 ]; then
+            TITLE_SLUG="new-engineering-insights"
           fi
+
+          FILENAME="_posts/${{ steps.date_info.outputs.today }}-${TITLE_SLUG}.md"
+
+          echo "Creating blog post: $FILENAME"
+          echo "Title slug: $TITLE_SLUG"
+
+          if [ -n "$GEMINI_SUMMARY" ]; then
+            echo "$GEMINI_SUMMARY" > "$FILENAME"
+            echo "✅ Blog post created successfully: $FILENAME"
+            echo "Post preview:"
+            head -20 "$FILENAME"
+          else
+            echo "❌ Error: No content generated"
+            echo "Error details: $GEMINI_ERROR"
+            exit 1
+          fi
+
+          # Set output for next step
+          echo "filename=$FILENAME" >> $GITHUB_ENV
         env:
           GEMINI_SUMMARY: ${{ steps.gemini_run.outputs.summary }}
           GEMINI_ERROR: ${{ steps.gemini_run.outputs.error }}
 
-      - name: Verify file content
-        run: |
-          echo "File created: ai_news.md"
-          cat ai_news.md
-
-      - name: Commit the new file
+      - name: Commit and push new blog post
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add ai_news.md
-          git commit -m "Add latest AI news summary"
+          git add ${{ env.filename }}
+          git commit -m "Add new blog post: $(basename ${{ env.filename }} .md | sed 's/[0-9-]*//g' | tr '-' ' ' | sed 's/^ *//' | sed 's/ *$//')"
           git push
