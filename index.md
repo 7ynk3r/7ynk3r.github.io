@@ -13,8 +13,13 @@ Whether you're navigating the shift from IC to management, adapting to
 AI-powered development workflows, or just curious about the future of tech,
 you'll find practical insights and honest perspectives here.
 
-{% for post in site.posts limit:5 %}
+{% assign one_month_ago = site.time | date: '%s' | minus: 2592000 %}
+{% assign recent_posts_count = 0 %}
 
+{% for post in site.posts %}
+  {% assign post_date_seconds = post.date | date: '%s' | plus: 0 %}
+  {% if post_date_seconds >= one_month_ago and recent_posts_count < 5 %}
+    {% assign recent_posts_count = recent_posts_count | plus: 1 %}
 <article class="post">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="post-meta">
@@ -29,9 +34,11 @@ you'll find practical insights and honest perspectives here.
     {% endif %}
     <a href="{{ post.url }}" class="read-more">Read more →</a>
 </article>
+  {% endif %}
 {% endfor %}
 
-{% if site.posts.size > 5 %}
-
-<p><a href="/archive">View all posts →</a></p>
+{% if recent_posts_count == 0 %}
+<p>No recent posts. <a href="/archive">Check the archive →</a></p>
+{% else %}
+<p><a href="/archive">View archived posts →</a></p>
 {% endif %}

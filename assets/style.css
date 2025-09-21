@@ -291,6 +291,70 @@ footer {
     z-index: 1;
 }
 
+/* Archive page styles */
+.archive-year {
+    margin-bottom: 2rem;
+}
+
+.archive-post {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.archive-meta {
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.archive-content {
+    flex: 1;
+}
+
+.archive-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.archive-content h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.archive-content h3 a:hover {
+    color: #007bff;
+}
+
+.archive-excerpt {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.no-posts {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 2rem 0;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
