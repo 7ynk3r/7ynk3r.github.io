@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Code & Culture
+# Humans, Machines And Everything In Between
 
 ![Banner]({{ '/assets/index.png' | relative_url }})
 
