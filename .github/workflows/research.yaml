@@ -84,16 +84,137 @@ jobs:
             exit 1
           fi
 
-          # Set output for next step
+          # Extract blog post details for notifications
+          BLOG_TITLE=$(grep '^title:' "$FILENAME" | sed 's/title: *"//g' | sed 's/".*//g')
+          BLOG_SLUG=$(basename "$FILENAME" .md | sed 's/^[0-9-]*-//g')
+          BLOG_URL="https://7ynk3r.github.io/${BLOG_SLUG}/"
+
+          # Set outputs for next steps
           echo "filename=$FILENAME" >> $GITHUB_ENV
+          echo "blog_title=$BLOG_TITLE" >> $GITHUB_ENV
+          echo "blog_url=$BLOG_URL" >> $GITHUB_ENV
         env:
           GEMINI_SUMMARY: ${{ steps.gemini_run.outputs.summary }}
           GEMINI_ERROR: ${{ steps.gemini_run.outputs.error }}
 
-      - name: Commit and push new blog post
+      - name: Generate social media draft post
+        id: social_draft
+        uses: google-github-actions/run-gemini-cli@v0.1.12
+        with:
+          prompt: |
+            Based on the blog post that was just created, write a compelling social media post to promote it.
+
+            Blog post title: ${{ env.blog_title }}
+            Blog post URL: ${{ env.blog_url }}
+
+            Create a social media post that works for LinkedIn, Twitter, or other professional platforms:
+            - Hook readers with an engaging opening (1-2 sentences)
+            - Highlight the key insights or main point
+            - Include relevant hashtags for engineering/tech audience
+            - End with a call-to-action to read the full post
+            - Keep it under 1300 characters (works for most platforms)
+            - Professional but conversational tone
+
+            Format:
+            [Engaging hook about the topic]
+
+            [Key insight or main point from the blog post]
+
+            [Another compelling point if space allows]
+
+            Read the full post: ${{ env.blog_url }}
+
+            #EngineeringLeadership #AI #TechLeadership #SoftwareDevelopment #SystemsThinking
+
+            Make it compelling and shareable for a professional engineering audience across platforms.
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_cli_version: "latest"
+          gemini_debug: false
+          gemini_model: "gemini-1.5-flash"
+
+      - name: Create social media draft file
+        run: |
+          # Create social media draft file
+          SOCIAL_FILE="social-draft-${{ steps.date_info.outputs.today }}.txt"
+
+          if [ -n "$SOCIAL_CONTENT" ]; then
+            echo "$SOCIAL_CONTENT" > "$SOCIAL_FILE"
+            echo "✅ Social media draft created: $SOCIAL_FILE"
+            echo ""
+            echo "📱 SOCIAL MEDIA POST READY:"
+            echo "=========================="
+            cat "$SOCIAL_FILE"
+            echo "=========================="
+            echo ""
+
+            # Set output for notification
+            echo "social_file=$SOCIAL_FILE" >> $GITHUB_ENV
+            echo "social_content<<EOF" >> $GITHUB_ENV
+            cat "$SOCIAL_FILE" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+
+          else
+            echo "❌ Error: No social media content generated"
+            echo "Error details: $SOCIAL_ERROR"
+          fi
+        env:
+          SOCIAL_CONTENT: ${{ steps.social_draft.outputs.summary }}
+          SOCIAL_ERROR: ${{ steps.social_draft.outputs.error }}
+
+      - name: Commit and push new blog post and social draft
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add ${{ env.filename }}
-          git commit -m "Add new blog post: $(basename ${{ env.filename }} .md | sed 's/[0-9-]*//g' | tr '-' ' ' | sed 's/^ *//' | sed 's/ *$//')"
+          if [ -n "${{ env.social_file }}" ]; then
+            git add ${{ env.social_file }}
+          fi
+          git commit -m "Add new blog post: ${{ env.blog_title }}
+
+📝 New blog post published: ${{ env.blog_url }}
+📱 Social media draft ready for sharing
+
+🤖 Generated with Claude Code
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
           git push
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "📝 New Blog Post Published: ${{ env.blog_title }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: "Blog Automation <${{ secrets.EMAIL_USERNAME }}>"
+          body: |
+            Hi JM,
+
+            Your new blog post has been published! 🎉
+
+            📝 **Post Title:** ${{ env.blog_title }}
+            🔗 **URL:** ${{ env.blog_url }}
+            📅 **Published:** ${{ steps.date_info.outputs.day_of_week }}, ${{ steps.date_info.outputs.month_day }}
+
+            📱 **Social Media Post Ready:**
+            ================================
+            ${{ env.social_content }}
+            ================================
+
+            **Next Steps:**
+            • Review the blog post at ${{ env.blog_url }}
+            • Copy the social media content above
+            • Share on your preferred platforms (LinkedIn, Twitter, etc.)
+            • Engage with any comments or responses
+
+            **Files Created:**
+            • Blog post: ${{ env.filename }}
+            • Social draft: ${{ env.social_file }}
+
+            Happy sharing! 🚀
+
+            ---
+            Automated by GitHub Actions
+            Generated with Claude Code
