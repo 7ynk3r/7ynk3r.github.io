@@ -19,6 +19,8 @@ jobs:
           prompt: "Summarize the top 3 AI news headlines from the past 48 hours in markdown format."
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           gemini_cli_version: "latest"
+          gemini_debug: true
+          gemini_model: "gemini-1.5-flash"
 
       - name: Create file with Gemini's response
         run: echo "${{ steps.gemini_run.outputs.gemini_response }}" > ai_news.md
