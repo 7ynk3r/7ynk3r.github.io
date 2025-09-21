@@ -3,7 +3,7 @@ name: Create New Blog Post
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: '0 12 * * 1' # Run every Monday at 12 PM UTC (optional)
+    - cron: "0 12 * * 1" # Run every Monday at 12 PM UTC (optional)
 
 jobs:
   create-blog-post:
@@ -32,7 +32,7 @@ jobs:
           prompt: |
             Write a complete blog post for JM's software engineering blog. Today is ${{ steps.date_info.outputs.day_of_week }}, ${{ steps.date_info.outputs.month_day }}.
 
-            The blog focuses on engineering leadership, AI & development, systems thinking, and team dynamics. Recent posts covered "Hiring Engineers in the AI Era" and "Is AI Turning Engineers Into Managers?". JM writes with a professional but conversational tone, providing practical insights and real-world applications.
+            The blog focuses on engineering leadership, AI & development, systems thinking, and team dynamics. Check the about.md and recent posts in _posts/ to understand the topics and style.
 
             Create a complete, ready-to-publish blog post starting with this exact YAML frontmatter format:
 
