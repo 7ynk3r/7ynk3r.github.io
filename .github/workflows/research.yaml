@@ -3,7 +3,7 @@ name: Create New Blog Post
 on:
   workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: "0 12 * * 1" # Run every Monday at 12 PM UTC (optional)
+    - cron: "0 12 * * 1" # Run every Monday at 5 AM PT (12 PM UTC)
 
 jobs:
   create-blog-post:
