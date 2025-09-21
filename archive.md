@@ -7,22 +7,19 @@ title: Archive
 
 All posts from the vault — insights from the past worth revisiting.
 
-{% assign one_month_ago = site.time | date: '%s' | minus: 2592000 %}
-{% assign has_old_posts = false %}
+{% assign posts_to_skip = 5 %}
+{% assign has_archive_posts = false %}
 
-{% for post in site.posts %}
-  {% assign post_date_seconds = post.date | date: '%s' | plus: 0 %}
-  {% if post_date_seconds < one_month_ago %}
-    {% assign has_old_posts = true %}
-    {% break %}
-  {% endif %}
-{% endfor %}
+{% if site.posts.size > posts_to_skip %}
+  {% assign has_archive_posts = true %}
+{% endif %}
 
-{% if has_old_posts %}
+{% if has_archive_posts %}
 {% assign current_year = "" %}
+{% assign post_index = 0 %}
 {% for post in site.posts %}
-  {% assign post_date_seconds = post.date | date: '%s' | plus: 0 %}
-  {% if post_date_seconds < one_month_ago %}
+  {% assign post_index = post_index | plus: 1 %}
+  {% if post_index > posts_to_skip %}
     {% assign post_year = post.date | date: '%Y' %}
     {% if post_year != current_year %}
       {% if current_year != "" %}</div>{% endif %}
@@ -52,5 +49,5 @@ All posts from the vault — insights from the past worth revisiting.
 {% if current_year != "" %}</div>{% endif %}
 
 {% else %}
-No archived posts yet. Check back later!
+No archived posts yet. All posts are recent!
 {% endif %}
