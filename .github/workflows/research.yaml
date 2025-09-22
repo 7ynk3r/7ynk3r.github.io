@@ -43,14 +43,9 @@ jobs:
             description: "Brief one-sentence description of the post"
             ---
 
-            Then write 800-1200 words covering a current trend in:
-            - Engineering leadership and team dynamics
-            - AI's impact on software development
-            - System architecture and scalability
-            - Technical career growth
-            - Modern development practices
+            Then write 800-1200 words covering a current trends
 
-            Use markdown with clear headings (##, ###), focus on actionable insights, and match JM's writing style: thoughtful, practical, and directly relevant to today's engineering challenges.
+            Use markdown with clear headings (##, ###), focus on actionable insights, and match JM's writing style: thoughtful, practical, and directly relevant to today's engineering challenges. Avoid bullet points.
 
             Write the complete post now, do not ask for confirmation. Do not wrap the YAML frontmatter in code blocks.
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
