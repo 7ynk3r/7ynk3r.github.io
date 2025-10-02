@@ -17,9 +17,8 @@ you'll find practical insights and honest perspectives here.
 
 {% assign recent_posts_count = 0 %}
 
-{% for post in site.posts %}
-  {% if recent_posts_count < 5 %}
-    {% assign recent_posts_count = recent_posts_count | plus: 1 %}
+{% for post in site.posts %} {% if recent_posts_count < 5 %} {% assign
+recent_posts_count = recent_posts_count | plus: 1 %}
 
 <article class="post">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>

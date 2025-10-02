@@ -3,51 +3,27 @@ layout: default
 title: Archive
 ---
 
-# Archive
+# All Posts
 
-All posts from the vault — insights from the past worth revisiting.
+Here's a complete list of all blog posts:
 
-{% assign posts_to_skip = 5 %}
-{% assign has_archive_posts = false %}
+{% assign eleven_months_ago = site.time | date: '%s' | minus: 28512000 | date:
+'%Y-%m-%d' %} {% for post in site.posts %} {% assign post_date = post.date |
+date: '%Y-%m-%d' %} {% if post_date < eleven_months_ago %}
 
-{% if site.posts.size > posts_to_skip %}
-  {% assign has_archive_posts = true %}
-{% endif %}
-
-{% if has_archive_posts %}
-{% assign current_year = "" %}
-{% assign post_index = 0 %}
-{% for post in site.posts %}
-  {% assign post_index = post_index | plus: 1 %}
-  {% if post_index > posts_to_skip %}
-    {% assign post_year = post.date | date: '%Y' %}
-    {% if post_year != current_year %}
-      {% if current_year != "" %}</div>{% endif %}
-
-## {{ post_year }}
-
-<div class="archive-year">
-      {% assign current_year = post_year %}
-    {% endif %}
-
-<article class="archive-post">
-    <div class="archive-meta">
+<article class="post">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">
-            {{ post.date | date: "%b %d" }}
+            {{ post.date | date: "%B %d, %Y" }}
         </time>
     </div>
-    <div class="archive-content">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        {% if post.description %}
-        <p class="archive-excerpt">{{ post.description }}</p>
-        {% endif %}
+    {% if post.description %}
+    <div class="excerpt">
+        {{ post.description }}
     </div>
+    {% endif %}
+    <a href="{{ post.url }}" class="read-more">Read more →</a>
 </article>
   {% endif %}
 {% endfor %}
-
-{% if current_year != "" %}</div>{% endif %}
-
-{% else %}
-No archived posts yet. All posts are recent!
-{% endif %}
