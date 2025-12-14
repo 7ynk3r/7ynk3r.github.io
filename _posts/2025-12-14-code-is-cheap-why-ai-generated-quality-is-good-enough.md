@@ -25,8 +25,13 @@ perfect. Just like Tesla's Full Self-Driving doesn't need to be flawless to be
 better than human drivers in most scenarios, AI-generated code doesn't need to
 be perfect to be better than what most teams produce under time pressure.
 
-The implications are profound. When code quality is no longer the primary
-constraint, what becomes the bottleneck? Build times and release processes.
+And this is just the beginning. AI-generated code will continue to improve in
+quality, speed, and cost. The models get better with each release. Generation
+gets faster. Costs continue to drop. What's good enough today will be even
+better tomorrow, making the economics even more compelling.
+
+The implications are profound. When achieving good code quality is no longer the
+limiting factor, what becomes the bottleneck? Build times and release processes.
 These are the real slow downs, along with human gates in the development
 workflow.
 
