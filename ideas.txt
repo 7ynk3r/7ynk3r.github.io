@@ -1,1 +1,0 @@
-- Feature velocity is easier to measure than code reliability
