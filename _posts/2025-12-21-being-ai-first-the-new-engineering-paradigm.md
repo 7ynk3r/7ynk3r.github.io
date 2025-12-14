@@ -5,21 +5,28 @@ date: 2025-12-21
 description: "How AI-first development changes problem-solving, why system experts are always available, and what this means for engineering teams"
 ---
 
-The most effective engineering teams I've seen aren't just using AI
-tools—they're fundamentally rethinking how they approach problems. They're not
-adding AI to their existing workflow. They're building new workflows around AI
-capabilities. This shift from AI-assisted to AI-first development changes
-everything: how we solve problems, how we access expertise, and what skills
-actually matter.
+I watched an engineer last week trying to find the root cause of a production
+issue. They had an error message and their regular IDE. They opened file after
+file, searching for where that error might originate. They navigated between
+classes, following method calls, tracing dependencies. They were still mapping
+the problem space, trying to understand what existed before they could even
+think about solving it.
+
+This is how we've always worked. But it doesn't have to be.
+
+The most effective engineering teams I've seen aren't adding AI to their
+existing workflow. They're building new workflows around AI capabilities. This
+shift from AI-assisted to AI-first development changes everything: how we solve
+problems, how we access expertise, and what skills actually matter.
 
 ## Being AI-First
 
-The most effective teams are throwing raw problems at AI agents first, then
-iterating down the line. This prevents bounding the solution space early on.
-When humans start solving a problem, we bring assumptions, constraints, and
-mental models that limit what we consider. We've seen similar problems before,
-so we jump to familiar solutions. We know what worked last time, so we try that
-again. These mental shortcuts are valuable, but they also constrain exploration.
+AI-first means throwing raw problems at AI agents first, and iterating down the
+line. This prevents bounding the solution space early on. When humans start
+solving a problem, we bring assumptions, constraints, and mental models that
+limit what we consider. We've seen similar problems before, so we jump to
+familiar solutions. We know what worked last time, so we try that again. These
+mental shortcuts are valuable, but they also constrain exploration.
 
 AI agents can explore a wider solution space before we narrow it down. They
 don't have the same biases, assumptions, or historical constraints. They can
