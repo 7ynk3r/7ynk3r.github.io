@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Code Is Cheap: Why AI-Generated Quality Is Good Enough"
+title: "Code Is Cheap: When AI-Generated Quality Is Good Enough"
 date: 2025-12-14
 description: "The shift from perfect code to good-enough code, and why build times and release processes are the real bottlenecks in modern software development"
 ---
