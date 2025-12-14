@@ -135,11 +135,9 @@ independently explored the same problem and arrived at three different valid
 solutions. Without coordination, they would have implemented conflicting
 approaches. The teams that thrive have developed practices for this: daily syncs
 focused on "what are we building?" rather than "who knows how to build this?"
-They use AI agents to explore options, then come together to make decisions. One
-team I know has a rule: "AI explores, humans decide." They let AI agents
-generate multiple approaches, then the team reviews and chooses together. This
-prevents the chaos of everyone building different solutions while leveraging
-AI's ability to explore quickly.
+They let AI agents generate multiple approaches, then come together to review
+and choose. This prevents the chaos of everyone building different solutions
+while leveraging AI's ability to explore quickly. "AI explores, humans decide."
 
 ## What This Means for Engineering Teams
 
