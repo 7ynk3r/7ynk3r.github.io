@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Being AI-First: The New Engineering Paradigm"
-date: 2025-12-14
+date: 2025-12-21
 description: "How AI-first development changes problem-solving, why system experts are always available, and what this means for engineering teams"
 ---
 
@@ -50,9 +50,10 @@ yesterday might be holding us back today.
 Getting familiar with new tools and ways of working isn't just about adopting
 technology—it's about breaking free from the constraints of habit. Every
 engineer who's been productive for years has developed patterns that work. But
-those patterns are optimized for a world where code was expensive and knowledge
-was scarce. In a world where code is cheap and system experts are always
-available, those patterns become constraints.
+those patterns are optimized for a world where knowledge was scarce and access
+to expertise required scheduling meetings and waiting. In a world where system
+experts are always available and AI agents can explore solution spaces
+instantly, those patterns become constraints.
 
 The most successful teams I've seen aren't the ones with the most experience in
 traditional workflows. They're the ones willing to experiment with new
@@ -141,27 +142,18 @@ while leveraging AI's ability to explore quickly. "AI explores, humans decide."
 
 ## What This Means for Engineering Teams
 
-The shift to AI-first development has practical implications for how we
-structure teams and evaluate engineers. If AI agents can provide system
-expertise on demand, we need more engineers who can work effectively with AI
-agents and make good decisions about when to trust AI output and when to apply
-human judgment.
+The shift to AI-first development changes how we approach problems, not just how
+we structure teams. When AI agents can explore solution spaces quickly, we need
+engineers who can make good decisions about which solutions to pursue. When AI
+agents can provide system expertise on demand, we need engineers who know when
+to trust AI output and when to apply human judgment.
 
-If AI agents can explore solution spaces quickly, we need engineers who can make
-good decisions about which solutions to pursue. If AI agents can generate code
-rapidly, we need engineers who can evaluate that code and integrate it
-effectively.
-
-This changes hiring, evaluation, and career development. We're not just looking
-for domain expertise anymore. We're looking for AI collaboration skills,
-judgment, and systems thinking. We're not just evaluating code quality. We're
-evaluating decision quality, problem-solving approach, and ability to work with
-AI tools.
-
-The engineers who thrive in this world aren't necessarily the ones with the
-deepest domain knowledge or the broadest experience. They're the ones who can
-effectively collaborate with AI agents to solve problems, make good decisions,
-and build systems that matter.
+This changes what we value in engineers. We're not just looking for domain
+expertise or code quality. We're looking for problem-solving approach, ability
+to work with AI tools, and judgment about when to explore versus when to decide.
+The engineers who thrive are the ones who can start with questions rather than
+solutions, who can leverage AI to expand possibilities before narrowing down,
+and who can break free from the inertia of familiar workflows.
 
 ## The Future of Engineering Work
 
@@ -175,7 +167,8 @@ This shift creates new opportunities and new challenges. The engineers who adapt
 will find their work more interesting, more impactful, and more valuable. The
 teams that adapt will move faster, learn more, and build better systems.
 
-The future belongs to engineers who can be AI-first in their approach, who can
-leverage system experts on demand, and who can work effectively with AI tools.
-The future belongs to teams that can collaborate with AI agents as effectively
-as they collaborate with each other.
+The future belongs to engineers who can be AI-first in their approach—starting
+with problems, not solutions; exploring before narrowing; and breaking free from
+the constraints of familiar workflows. The future belongs to teams that can
+collaborate with AI agents to expand possibilities, then come together to make
+decisions. "AI explores, humans decide"—this is the new paradigm.
