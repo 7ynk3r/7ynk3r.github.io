@@ -8,6 +8,7 @@ title: Archive
 Here's a complete list of all blog posts:
 
 {% for post in site.posts %}
+
 <article class="post">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="post-meta">
