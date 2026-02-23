@@ -9,7 +9,7 @@ In many products the PRD is missing or years out of date. The real behavior live
 
 This follows from a simple idea: [the spec is the real source code](https://7ynk3r.github.io/2026/01/19/specifications-are-becoming-the-real-source-code/). If we believe that, then when the spec is missing we should recover it, not accept that "the code is the documentation." A reverse PRD is the artifact you get when you infer intent from behavior, socialize it with stakeholders, and lock it in as the reference for tests and refactors. The only thing that matters is the spec. Everything else should align to it.
 
-There is no denying that at the end of the day code is law: it is what runs. But not everyone can read it. Product, design, support, and many engineers think in behavior and intent, not in syntax. The PRD is the desired spec—the human-readable contract that says what the system does and why. Reverse PRD is how you get that contract when it was never written or has drifted out of view.
+There is no denying that at the end of the day "code is law": it is what runs. But not everyone can read it. Product, design, support, and many engineers think in behavior and intent, not in syntax. The PRD is the desired spec—the human-readable contract that says what the system does and why. Reverse PRD is how you get that contract when it was never written or has drifted out of view.
 
 ## Validation is where the time goes
 
