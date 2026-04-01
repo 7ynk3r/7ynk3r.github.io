@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AutoProduct: A Darwinian System for Building What Users Actually Want"
+title: "A Darwinian System for Building What Users Actually Want"
 date: 2026-04-01
 description: "Karpathy's AutoResearch loop can be extended from model experiments to product strategy, backlog generation, and continuous feature evolution."
 ---
