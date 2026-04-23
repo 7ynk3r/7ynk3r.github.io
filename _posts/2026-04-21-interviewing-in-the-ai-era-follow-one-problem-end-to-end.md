@@ -21,6 +21,8 @@ Providing tests can be useful, especially when you want a baseline of correctnes
 
 Before inviting someone onsite, review the take-home exactly as you would review a peer's pull request. Read it for maintainability, not only for correctness. Ask whether the architecture is easy to extend. Ask whether the abstractions are justified. Ask whether the code reads like something you would want on your team six months from now.
 
+One practical way to make this step more consistent is to run an agent-assisted review using a prompt your interview panel agrees on in advance, then pair those agent notes with the reviewer's own notes. The agent can help surface blind spots and pattern-level issues, while the human reviewer adds context, taste, and role-specific judgment. The combination gives you a stronger and more repeatable pre-onsite brief than either source alone.
+
 This review will never be perfect, and that is fine. In fact, imperfections are useful because they generate real discussion prompts for the next stage. The goal is not to "catch" the candidate. The goal is to identify technical decisions worth examining in a collaborative conversation.
 
 When teams skip this step, they often waste onsite time rediscovering first-pass impressions that could have been prepared in advance. When teams do this step well, onsite interviews become sharper because every discussion starts from concrete artifacts rather than hypotheticals.
