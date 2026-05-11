@@ -33,6 +33,8 @@ Creates a new blog post for the Jekyll site using the provided description.
    - Match JM's writing style: thoughtful, practical, directly relevant to
      today's engineering challenges
    - Avoid excessive bullet points (prefer prose)
+   - Avoid em dashes (`U+2014`); use commas, parentheses, semicolons, or
+     separate sentences instead
    - Include actionable insights, not just theory
 
 4. **Save the file**:
