@@ -29,6 +29,8 @@ Creates a LinkedIn-native promotional post based on a blog article.
      article.
    - Keep the tone specific and authentic; avoid generic advice and mechanical
      phrasing.
+   - Avoid em dashes (`U+2014`); use commas, parentheses, semicolons, or
+     separate sentences instead.
    - Avoid generic hashtags. If needed, use at most 2 hyper-niche hashtags.
    - End with a clear call to action to read the full post and include the URL
      naturally in the closing lines.
@@ -37,6 +39,7 @@ Creates a LinkedIn-native promotional post based on a blog article.
    - Confirm hook appears before character 210.
    - Confirm total length is between 900 and 1200 characters.
    - Confirm no bullet-list formatting is used.
+   - Confirm no em dashes (`U+2014`) are present.
    - Confirm no generic hashtags are present.
 
 5. **Display the result**:

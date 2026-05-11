@@ -110,6 +110,8 @@ description: "Brief one-sentence description of the post"
 - **Format**: Use markdown with clear headings (`##`, `###`)
 - **Focus**: Actionable insights, not just theory
 - **Avoid**: Excessive bullet points (prefer prose)
+- **Avoid**: Em dashes (`U+2014`); use commas, parentheses, semicolons, or
+  separate sentences instead
 
 ### Topics Covered
 

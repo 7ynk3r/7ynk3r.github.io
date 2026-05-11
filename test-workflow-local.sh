@@ -39,6 +39,8 @@ Then write 800-1200 words covering a current trend in:
 
 Use markdown with clear headings (##, ###), focus on actionable insights, and match JM's writing style: thoughtful, practical, and directly relevant to today's engineering challenges.
 
+Avoid em dashes (U+2014); use commas, parentheses, semicolons, or separate sentences instead.
+
 Write the complete post now, do not ask for confirmation. Do not wrap the YAML frontmatter in code blocks."
 
 echo "🤖 Calling Gemini API to generate blog post..."

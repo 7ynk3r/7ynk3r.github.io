@@ -9,6 +9,7 @@ Using idea 2, I need you to create a new blog post for my Jekyll site. Please:
 2. CREATE: Generate a new post using idea X following my write style
 2.2. Try to avoid bullet points
 2.3. Check my previous posts for other style aspects
+2.4. Avoid em dashes (U+2014); use commas, parentheses, semicolons, or separate sentences instead
 3. REVIEW: Open the new post in a browser so I can review it
 
 Step 3
