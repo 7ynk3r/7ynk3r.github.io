@@ -2,57 +2,69 @@
 layout: post
 title: "Embrace the Exponentials in Your Team"
 date: 2026-05-14
-description: "Some engineers on your team are already operating on a different curve. The leadership challenge is not slowing them down to the mean, but designing around their leverage."
+description: "Operating at exponential pace is not about working harder. It is about restructuring how work flows: parallel streams, shallow planning, closed loops, and agents doing the building."
 ---
 
-Three months ago, an engineer on a team I was advising started closing issues at a pace that made the rest of the sprint board look like background noise. Not slightly faster, qualitatively different. PRs that used to take a week were landing in a day. Problems that required two or three back-and-forth review cycles were arriving with the edge cases already handled, the tests already written, the migration path already sketched. The other engineers on the team were solid, experienced, and working hard. The gap had nothing to do with effort.
+Most teams that adopt AI tools do not change how they work. They add a faster code editor to the same workflow, the same sprint rituals, the same planning overhead, the same single-threaded execution. The tools get faster. The output barely moves. The reason is that the bottleneck was never typing speed. It was the operating model.
 
-The manager's first instinct was to wonder if something was wrong. Maybe the work was shallow. Maybe corners were being cut. Maybe the velocity numbers were being gamed somehow. After digging in, none of that was true. The engineer had crossed a threshold that most of the team had not crossed yet: they were operating with AI as a genuine amplifier rather than an occasional assistant, and the compounding had kicked in.
+Crossing from linear to exponential output requires changing the structure of how work flows through your team. Not the tools alone. The habits, the process, the way work is queued and executed and reviewed. Here is what that actually looks like in practice.
 
-That manager's second instinct was to distribute the engineer's work differently, slow the review process to keep pace with the rest of the team, and add more documentation requirements. All of that would have been a mistake.
+## Run Multiple Work Streams in Parallel
 
-## Two Curves Are Now Running in Parallel
+The single biggest structural change is moving from one work stream to many. In practice this means running multiple copies of the repository simultaneously: separate worktrees or separate clones, each on its own branch, each with an agent working through a discrete problem. When one stream gets blocked on a review, a flaky dependency, or an ambiguous requirement, you do not stop. You switch to the next one and let the agent continue when the blocker resolves.
 
-Every engineering team of meaningful size now contains people operating on fundamentally different productivity curves. One group is iterating linearly, making steady, respectable progress through the same general workflow they have used for years. The other group has crossed some inflection point where their tools, their habits, and their judgment compound together in a way that linear scaling cannot describe.
+Cloud environments extend this further. You are not limited to what fits on your local machine. Each work stream can run in its own isolated box, and you move between them as a foreman moves between workers, checking progress, unblocking, steering direction. The limit is cognitive, not technical. More than five parallel streams and your ability to maintain context across all of them degrades fast enough to cancel the gains.
 
-The gap is not a matter of raw intelligence or years of experience. I have seen junior engineers cross the threshold before seniors who are technically more accomplished. What distinguishes the exponential operators is not what they know but how they work: they have rebuilt their workflow around AI-first exploration, they iterate in tight loops, they treat code generation as cheap and judgment as expensive, and they have developed the taste to know when output is good enough to ship and when it needs another pass. They have internalized what I wrote about earlier this year: [the specification is now the real source code](/2026/01/19/specifications-are-becoming-the-real-source-code/), and the hard work happens before the implementation begins.
+The mental model shift is significant. You are no longer a single-threaded producer. You are a scheduler and a reviewer, and your job is to keep the streams moving, not to do the building yourself.
 
-The critical point for leaders is that the gap between these two curves is not closing. It is widening. Every month that passes without crossing the threshold is a month of compounding advantage lost.
+## Keep the Backlog Deep
 
-## What Embracing Actually Requires
+Parallel work streams only help if there is always something to work on. This is where PMs and EMs face a new failure mode that did not meaningfully exist before: the backlog running dry.
 
-Most organizations respond to their exponential operators the same way that manager initially did: by averaging them back to the mean. The instinct is understandable. A team full of people moving at different speeds creates coordination overhead. Standard processes exist for good reasons. Consistency matters for review quality and knowledge transfer.
+When execution capacity was the constraint, a two-week backlog felt healthy. There was always more work queued than the team could ship. Now, with agents running multiple streams simultaneously, that buffer evaporates quickly. The PM who still prepares work on a sprint-by-sprint cadence will find engineers and agents sitting idle waiting for the next well-defined task.
 
-But the averaging instinct destroys the thing worth preserving. When you slow an exponential operator to match team velocity, you are not making the team more cohesive. You are dismantling the most valuable feedback loop your team has access to: a live demonstration that a different way of working is possible.
+The new operating model requires the backlog to stay roughly three times deeper than current execution capacity. Not because all of it will get built, but because agents and engineers should never be the bottleneck in their own pipeline. The moment an engineer has to stop and ask what to work on next, the system has failed. That is a PM and EM problem, not an engineering problem.
 
-Embracing the exponentials starts with resisting that averaging impulse. It means accepting that your team now contains people who should operate under different constraints, not because they have earned special treatment, but because the standard constraints were designed for a different kind of workflow and will actively damage theirs.
+## Identify Your Closed Loops
 
-Concretely, this means giving exponential operators wide scope rather than narrow tickets. It means measuring their contribution at a level of abstraction that the standard sprint metrics cannot capture. Story points designed for linear estimation will always make exponential output look like cheating. The right question is not whether someone's velocity number looks reasonable. The right question is whether their work is coherent, well-reasoned, and extending the capabilities of the system in the right direction.
+Not all work requires human involvement at every step. Closed loops are the parts of the codebase where an agent can iterate autonomously: a well-defined scope, a test suite that functions as a fitness function, and a low cost of reverting if something goes wrong. Performance improvements, test coverage gaps, dependency upgrades, dead code removal, accessibility fixes. These are areas where you can hand off a task, let the agent run, and review the outcome rather than the process.
 
-## The Measurement Trap
+The value of closed loops is compounding. Once you identify them, they can run in the background across multiple cycles, returning results for human review without consuming your active attention. They are also a useful calibration tool: the quality of an agent's output on a closed loop tells you how much latitude to grant it on more open-ended work.
 
-Standard engineering metrics were built for a world where implementation capacity was the bottleneck. PR count, lines reviewed, tickets closed per sprint, on-call response time: all of these measure throughput of a specific kind. They made sense when the constraint was developer time applied to discrete tasks.
+Start by cataloging where your test coverage is strong enough to make agent iteration safe. Those are your first closed loops.
 
-That constraint has shifted. For exponential operators, implementation is no longer the bottleneck. Judgment is. They can produce more implementation than the team can safely review or deploy. Their actual scarce resource is the clarity of their thinking about what to build and why.
+## Ship Behind Flags, Always
 
-Measuring them on throughput metrics will produce bad outcomes in one of two directions. Either you will optimize their throughput and they will generate more output than the system can absorb, which creates a different kind of chaos. Or you will interpret their high throughput as suspicious and apply friction to slow it down, which eliminates the value.
+The fear that slows teams down is not technical. It is psychological. Engineers hold back changes because they are not sure they are ready. PMs delay releases because something might break. The process accumulates review gates and staging cycles that exist to manage anxiety more than to catch real errors.
 
-The better frame is leverage. How many other engineers does this person make more effective? How much complexity does their architectural judgment prevent? How much rework does their code review catch before it becomes technical debt? These things are harder to quantify but they are the actual product of an exponential operator working well.
+Feature flags collapse that anxiety. If a change is gated behind a flag, it is not really released until you choose to enable it. You can deploy continuously and release deliberately. The addition cannot break the current system because the current system does not see it until you decide it should.
 
-## Designing Around Leverage
+This changes the rhythm of development significantly. Merging and deploying become low-stakes routine events. The release decision is decoupled from the deployment decision. Teams that internalize this stop treating deployments as moments of risk and start treating them as infrastructure hygiene, which is what they should always have been.
 
-The org design question follows from the measurement question. If the value of an exponential operator is leverage rather than throughput, then the role structure should maximize leverage rather than treat them as a high-output individual contributor.
+## Use RFCs for Big Features, Agents for Code Review
 
-This looks different in practice than it sounds in theory. It does not mean making everyone a staff engineer with vague strategic responsibilities. It means pairing exponential operators with teams or problems where their working style will propagate. It means making them the first person to touch a new area so they can establish patterns that others can then follow. It means giving them permission to refactor processes, not just code, when they identify something that is slowing the team's ability to compound.
+Human review time is expensive and finite. It should go where human judgment is genuinely irreplaceable.
 
-Airtable divided their engineering teams into fast-thinking units for rapid iteration and slow-thinking units for infrastructure and long-term durability. Affirm paused normal engineering for a week to rebuild the workflow of over eight hundred engineers around agentic development. These are organizations that recognized the exponential curve was real and restructured around it rather than waiting for a gradual cultural shift. The teams that are dragging their feet on this restructuring are building a gap that will be very expensive to close later.
+For large features, that place is the RFC. Before an agent writes a line of code on a significant new capability, a short written document should describe what is being built, why, and how the main pieces fit together. This is not a heavyweight design process. It is a one-to-two page artifact that gives both the agent and the team a shared model of what success looks like. Without it, agents and engineers make incompatible assumptions in parallel and the integration cost is brutal.
 
-## The Hardest Part Is Psychological
+For code review, the calculus is different. An agent reviewing a pull request for correctness, style consistency, test coverage, and obvious edge cases is faster and more consistent than a human doing the same scan. Human reviewers should focus on whether the code is solving the right problem, not on whether the variable names follow convention. Use agents to surface the mechanical issues, and reserve human attention for the judgment layer.
 
-Leaders who built their careers on deep linear mastery of a technical domain have a genuine adaptation challenge here. When someone on your team is operating in a way you do not fully understand, at a velocity that makes your own historical output look modest, the natural response is some combination of skepticism and defensiveness. That response is worth examining carefully, because it is exactly the response that prevents you from learning what the exponential operator is doing and why it works.
+The distinction is simple: RFCs get human review because they define intent. Code gets agent review because agents can verify execution against intent more reliably than humans checking line by line.
 
-The most useful thing a leader can do with an exponential operator is study them. Not manage them or constrain them, but watch the loop they are running, understand what judgment calls they are making, and ask how the rest of the team can get closer to that approach. The gap in productivity curves is not a fixed property of individuals. It is a gap in methods. Methods can spread.
+## Stop Touching Code by Hand
 
-The teams that compound the fastest are the ones where the exponentials are visible, respected, and structurally positioned to pull others up the curve. That does not happen by accident. It happens because someone in leadership decided to stop treating the exponentials as outliers to be managed and started treating them as the signal worth following.
+The hardest habit to break is opening the editor and making the change yourself. It is almost always faster in the moment. You know exactly where the file is, you know what needs to change, and the three-second edit feels more efficient than writing a prompt and reviewing the output. That instinct is correct in the short term and damaging in the long term.
 
-The curve is not going back to linear. The only meaningful question is where your team sits on it, and whether you are designing to move up or to stay put.
+Every time you reach into the codebase directly, you are reinforcing a workflow that does not scale. The engineers and teams operating at exponential pace have rebuilt their default behavior: the agent codes, the human directs and reviews. That shift requires deliberately practicing the slower path until it becomes the faster one.
+
+This is not a rule to follow religiously. There are moments where a direct edit is the right call. The point is to notice when the reflex to do it yourself is habit rather than judgment, and to resist it. The throughput difference between a team where everyone has crossed that threshold and a team where most people have not is not incremental. It is the difference between two curves that are moving apart.
+
+## Plan Less, Try More
+
+The last shift is the most counterintuitive for anyone who has spent time in a process-heavy organization. Planning costs have not changed. Coordination meetings, product discovery sprints, market validation cycles, GTM alignment: all of this consumes roughly the same time it did five years ago. Implementation costs have collapsed. This means the ratio that once justified heavy upfront planning no longer holds.
+
+For reversible decisions, the bias should be strongly toward building and testing over planning and validating. If you are unsure whether a feature is worth building, the cost of building a version behind a flag and watching what happens is often lower than the cost of the research process that would have given you a confident answer three months later.
+
+The process that survives this recalibration is the RFC: a lightweight artifact for irreversible or high-coordination decisions. The process that does not survive it is the discovery ritual performed before every feature, regardless of stakes. Most features are reversible. Most discovery cycles are expensive. The teams moving fastest have noticed this and adjusted.
+
+Build more. Validate in production. Reserve the planning overhead for the decisions that genuinely cannot be undone.
