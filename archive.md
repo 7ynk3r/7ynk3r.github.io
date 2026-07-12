@@ -9,7 +9,7 @@ Here's a complete list of all blog posts:
 
 {% for post in site.posts %}
 
-<article class="post">
+<article class="post" data-pubdate="{{ post.date | date_to_xmlschema }}">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">
