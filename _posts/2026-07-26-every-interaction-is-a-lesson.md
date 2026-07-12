@@ -65,4 +65,4 @@ The corrections you have already made, across every review cycle in the past yea
 
 The ones that are still accessible are worth recovering. Not because the individual corrections matter, but because the pattern across them is the closest thing to a curriculum that an agent could have for working in your specific context.
 
-You wrote it already. You just did not keep it.
+You wrote it already. You just need to keep it.
