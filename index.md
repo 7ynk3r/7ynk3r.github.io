@@ -20,7 +20,7 @@ you'll find practical insights and honest perspectives here.
 {% for post in site.posts %} {% if recent_posts_count < 5 %} {% assign
 recent_posts_count = recent_posts_count | plus: 1 %}
 
-<article class="post">
+<article class="post" data-pubdate="{{ post.date | date_to_xmlschema }}">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">

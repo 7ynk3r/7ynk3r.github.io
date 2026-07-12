@@ -32,5 +32,11 @@
             <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+      var now = new Date();
+      document.querySelectorAll('article[data-pubdate]').forEach(function(el) {
+        if (new Date(el.dataset.pubdate) > now) el.style.display = 'none';
+      });
+    </script>
 </body>
 </html> 
