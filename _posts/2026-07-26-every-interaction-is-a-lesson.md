@@ -63,6 +63,6 @@ Teaching an agent from scratch requires deliberate effort. Teaching it from a re
 
 The corrections you have already made, across every review cycle in the past year, contain a precise description of how you and your team work and what you actually want. Some of it is in closed pull requests. Some of it is in comment threads on documents that shipped months ago. Some of it is in conversation histories that have already been pruned. Some of it is in design files, contract redlines, customer feedback threads, and anywhere else people have been doing the work of pushing outputs toward standards.
 
-The ones that are still accessible are worth recovering. Not because the individual corrections matter, but because the pattern across them is the closest thing to a curriculum that an agent could have for working in your specific context.
+The ones that are still accessible are worth recovering. Not because the individual corrections matter, but because the pattern across them is the closest thing to a playbook that an agent could have for working in your specific context.
 
 You wrote it already. You just need to keep it.
