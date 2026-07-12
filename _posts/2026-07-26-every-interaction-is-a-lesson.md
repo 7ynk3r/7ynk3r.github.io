@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Feedback Is the Curriculum"
+title: "Every Interaction Is a Lesson"
 date: 2026-07-26
 description: "Anywhere a human gave input to push an output closer to what they actually wanted, that interaction contains a precise description of their standards. The trick is to stop letting it evaporate."
 ---
@@ -57,7 +57,7 @@ Every review generates episodic memory. Right now, most of it is going into a sy
 
 ## The Leverage Point
 
-The previous post in this series argued that every agent task is a primitive, and primitives compound. This is the mechanism by which that compounding happens faster.
+The [previous post in this series]({% post_url 2026-07-19-do-everything-with-an-agent %}) argued that every agent task is a primitive, and primitives compound. This is the mechanism by which that compounding happens faster.
 
 Teaching an agent from scratch requires deliberate effort. Teaching it from a review that already happened requires almost none; the work was done during the review itself. The cost of the reflection pass is nearly zero relative to the cost of the review that produced the raw material. What changes is just whether you treat the review as an endpoint or as a source.
 
