@@ -5,11 +5,11 @@ date: 2026-07-11
 description: "The engineering backlog is a tax on organizational creativity. Give everyone—sales, CS, product, design—the same tools engineers have, in a safe sandbox, and watch what emerges."
 ---
 
-A sales rep at a mid-size SaaS company had a request. She wanted a simple internal page that pulled together her top ten accounts, showed the last three support tickets per account, and surfaced renewal dates with a red flag when they were within sixty days. Nothing fancy. A dashboard that would save her fifteen minutes of tab-switching every morning.
+Picture a sales rep who needs a simple internal page: her top ten accounts, the last three support tickets per account, renewal dates flagged red when they are within sixty days. Nothing fancy. A dashboard that would save her fifteen minutes of tab-switching every morning.
 
-She submitted a ticket. Engineering triaged it as a low-priority internal request. It sat in the backlog for four months, behind revenue-critical features, platform migrations, and a compliance audit. She eventually stopped asking and went back to her spreadsheet.
+She submits a ticket. Engineering triages it as low-priority, behind revenue-critical features, a platform migration, and a compliance audit. It sits for months. She eventually stops asking and goes back to her spreadsheet.
 
-That story is not exceptional. It is the default. Every organization runs a quiet tax on its own creativity—a backlog of ideas that never become software because the people who have the idea are not the people who can build it, and the people who can build it are already spoken for.
+That scenario is not exceptional. It is the default. Every organization runs a quiet tax on its own creativity—a backlog of ideas that never become software because the people who have the idea are not the people who can build it, and the people who can build it are already spoken for.
 
 The interesting question is not why this happens. It is whether it still has to.
 
