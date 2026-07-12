@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Teach Once, Invoke Forever"
-date: 2026-07-12
+date: 2026-07-19
 description: "Every task you delegate to an agent is a primitive. Primitives combine. The real value is not the task you just completed, it is the capability you just added to every future workflow."
 ---
 
