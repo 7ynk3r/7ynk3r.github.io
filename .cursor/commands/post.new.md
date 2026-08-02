@@ -79,4 +79,15 @@ Creates a new blog post for the Jekyll site using the provided description.
    - Save as `_posts/YYYY-MM-DD-title-slug.md`
    - If title extraction fails, use `_posts/YYYY-MM-DD-new-post.md`
 
-5. **Display the result**: Show the generated post and confirm the file location
+5. **Humanize the post** (required):
+   - Apply the humanizer skill from `skills/blader/SKILL.md` to the saved
+     file, operating in **file mode**.
+   - Rewrite the prose in place. Leave the YAML frontmatter, any code blocks,
+     and link targets untouched.
+   - Run the full loop: draft rewrite → audit for lingering AI patterns →
+     final rewrite with no em or en dashes.
+   - Report a short summary of the changes made (do not paste the whole post
+     back).
+
+6. **Display the result**: Confirm the file location and summarize what the
+   humanizer changed.
