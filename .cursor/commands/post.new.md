@@ -32,10 +32,45 @@ Creates a new blog post for the Jekyll site using the provided description.
    - Use markdown with clear headings (##, ###)
    - Match JM's writing style: thoughtful, practical, directly relevant to
      today's engineering challenges
-   - Avoid excessive bullet points (prefer prose)
    - Avoid em dashes (`U+2014`); use commas, parentheses, semicolons, or
      separate sentences instead
-   - Include actionable insights, not just theory
+
+   **Voice and argument**
+   - Each paragraph must make a distinct move. Never restate what the previous
+     paragraph said in different words.
+   - The last sentence of the body is the final thought. Never add a separate
+     "Final Thought" or "Conclusion" section that just summarizes what the post
+     already said.
+   - Put personal stakes on the line. Use "I" with specificity: what JM
+     observed, built, decided, or got wrong. Avoid: "some teams I've seen",
+     "forward-thinking organizations", "high-performing teams". If you cannot
+     name the specific team or project, describe the situation concretely enough
+     that it reads as real.
+   - Do not hedge the conclusion. If the post argues X, end on X. Do not soften
+     it with "of course, context matters" or "this isn't for everyone".
+
+   **Banned verbal tics** (never use these constructions):
+   - "The future belongs to..."
+   - "The companies that X will Y. The ones that don't will Z."
+   - "This isn't about replacing X, it's about Y."
+   - "X is not the goal. Y is the goal."
+   - Any section titled "Final Thought", "Implications", or "What This Means for
+     Engineering Teams" that just restates the post's thesis.
+
+   **Structure**
+   - Prefer prose over bullet lists. Use a list only when the items are
+     genuinely enumerable and parallel, not when you are avoiding writing the
+     argument that would connect them.
+   - Open with a concrete scene, decision, or observation — not a trend
+     statement. The first paragraph should make the reader feel something
+     specific happened.
+   - Do not name-drop AI tools (GitHub Copilot, Claude, Cursor, etc.) as a
+     substitute for a concrete example. Tool names are not examples. Describe
+     what actually happened or was built.
+   - If referencing an external person or project (e.g. Karpathy), the post
+     must contain at least as much original argument as it does commentary on
+     that reference. The reader should leave thinking about JM's insight, not
+     the reference's.
 
 4. **Save the file**:
    - Extract the title from the frontmatter
