@@ -13,7 +13,7 @@ This is what I meant when I said [specifications are becoming the real source co
 
 ## The pipeline
 
-The project is a CRDT-based sync engine for restaurant kitchen tablets. Offline-first, field-level conflict resolution, peer-to-peer sync over gRPC. The kind of system where edge cases matter and distributed semantics are the hard part. The pipeline has four stages.
+The project is a [CRDT](https://grokipedia.com/page/Conflict-free_replicated_data_type)-based sync engine for restaurant kitchen tablets. Offline-first, field-level conflict resolution, peer-to-peer sync over [gRPC](https://grokipedia.com/page/GRPC). The kind of system where edge cases matter and distributed semantics are the hard part. The pipeline has four stages.
 
 **PRD.** One document. Problem statement, use cases, functional requirements, data model, flows. Written in Markdown with Protobuf schemas and Mermaid diagrams. This is the contract between the product vision and the engineering work. It defines what the system does and why, in language precise enough for an agent to consume but readable enough for a product manager to review. Twelve use cases, nineteen functional requirements, eight non-functional targets.
 

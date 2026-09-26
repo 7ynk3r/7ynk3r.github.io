@@ -35,7 +35,7 @@ This is not a new idea in principle—the citizen developer movement has argued 
 
 ## Shadow IT Is a Symptom, Not the Problem
 
-When organizations lock down their tools and refuse to give non-engineers access to infrastructure, they do not eliminate the building instinct. They push it underground. The result is shadow IT: unauthorized SaaS subscriptions, rogue Airtable bases connected to customer data, spreadsheets doing the job of databases, Zapier automations nobody in IT knows exist. By some estimates, enterprises have hundreds of unmanaged applications in use at any given time, most of them solving real problems that the official toolchain failed to address.
+When organizations lock down their tools and refuse to give non-engineers access to infrastructure, they do not eliminate the building instinct. They push it underground. The result is shadow IT: unauthorized SaaS subscriptions, rogue [Airtable](https://grokipedia.com/page/Airtable) bases connected to customer data, spreadsheets doing the job of databases, [Zapier](https://grokipedia.com/page/Zapier) automations nobody in IT knows exist. By some estimates, enterprises have hundreds of unmanaged applications in use at any given time, most of them solving real problems that the official toolchain failed to address.
 
 Shadow IT is what happens when the demand for building exceeds the permitted supply. The sandbox is the sanctioned alternative. It says: yes, build here, with proper tooling, connected to real schemas, governed by normal access controls. The builds stay visible, auditable, and contained. The people with ideas stop working around the system and start working inside it.
 

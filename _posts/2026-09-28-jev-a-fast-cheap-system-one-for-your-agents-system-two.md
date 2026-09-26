@@ -5,7 +5,7 @@ description: "TypeSafe named its model after Kahneman's fast thinking and Jevons
 date: 2026-09-28
 ---
 
-Daniel Kahneman split thinking into two systems: System 1, fast and intuitive,
+[Daniel Kahneman](https://grokipedia.com/page/Daniel_Kahneman) split thinking into two systems: System 1, fast and intuitive,
 and System 2, slow and deliberate. Every LLM we call from an agent is doing
 System 2 work, generating a paragraph token by token, even when the actual
 question is a yes or no. TypeSafe AI built a model for the other half. They call
@@ -72,7 +72,7 @@ every incoming ticket before a generative model touches the queue, running a
 policy check on every expense or procurement approval, and routing every request
 to a cheap or expensive model based on how complex it actually is.
 
-## The Jevons bet, applied
+## The [Jevons](https://grokipedia.com/page/Jevons_paradox) bet, applied
 
 Cheaper coal didn't reduce coal use, it multiplied it. TypeSafe is betting the
 same happens to AI decisions: every order of magnitude drop in the cost of a
@@ -81,5 +81,3 @@ correctness, and a bounded answer space isn't the same as a right answer, so the
 caveats are real. But if the bet holds, the interesting design question stops
 being "which model should answer this" and becomes "which of these decisions
 were we not checking at all, because checking used to cost too much."
-
-← [Specs In, Code Out](/2026/02/22/specs-in-code-out/)

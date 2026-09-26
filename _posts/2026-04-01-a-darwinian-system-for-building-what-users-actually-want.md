@@ -9,7 +9,7 @@ Imagine a team spending ninety minutes debating a single roadmap item. Smart peo
 
 That is the old model. Strategy is episodic, planning-heavy, and only occasionally corrected by real usage data. The new model is different: product strategy runs as a continuous evolutionary loop, where ideas are generated, tested in production, selected by outcomes, and replaced when they fail.
 
-Karpathy's AutoResearch points to the pattern. In that loop, an agent edits code, runs an eval, keeps what improves the score, and discards what does not. Applied to model research, this feels natural. Applied to product development, it looks radical until you notice we already do a slower, less consistent version of it. We ship changes, wait for behavior, and decide what survives.
+[Karpathy](https://grokipedia.com/page/Andrej_Karpathy)'s AutoResearch points to the pattern. In that loop, an agent edits code, runs an eval, keeps what improves the score, and discards what does not. Applied to model research, this feels natural. Applied to product development, it looks radical until you notice we already do a slower, less consistent version of it. We ship changes, wait for behavior, and decide what survives.
 
 The real shift is not that agents can write code. The shift is that product work can be treated as search.
 
@@ -31,7 +31,7 @@ This is where many teams fail. They optimize for experiment velocity without inv
 
 In practice, eval becomes the product operating system.
 
-## Goodhart's Law at Product Scale
+## [Goodhart's Law](https://grokipedia.com/page/Goodhart%27s_law) at Product Scale
 
 Single-metric optimization is fragile. If an agent is rewarded only for conversion, it can discover manipulative tactics that increase short-term clicks and erode long-term trust. If it is rewarded only for engagement, it may optimize for time spent rather than value delivered.
 

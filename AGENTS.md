@@ -20,6 +20,8 @@ Site is served at `http://localhost:4000`. Jekyll has built-in live-reload via `
 
 ### Skills
 
-The project ships a local copy of the **humanizer** skill (`skills/blader/SKILL.md`). This skill removes signs of AI-generated writing and is sourced from [blader/humanizer](https://github.com/blader/humanizer).
+- **`skills/blader/SKILL.md`** (humanizer): removes signs of AI-generated writing, sourced from [blader/humanizer](https://github.com/blader/humanizer). **You MUST apply this as the final editing pass on every post you write.** After drafting, run the full loop (draft → audit → rewrite) in **file mode**: rewrite the file in place, report a short summary of what changed, leave frontmatter/code blocks/link targets untouched.
+- **`.cursor/skills/personal/write-post/SKILL.md`**: generates a new blog post matching this repo's voice, structure, and banned-phrase rules, then runs the humanizer skill above before saving. Use this instead of freehanding a post from memory.
+- **`.cursor/skills/personal/write-linkedin-post/SKILL.md`**: generates a LinkedIn promo post for a blog article (900-1200 chars, hook in the first 210 chars, prose only, no em dashes). Use this instead of freehanding a LinkedIn post; it replaces the old `.cursor/commands/linkedin.new.md` slash command.
 
-**You MUST apply the humanizer skill as the final editing pass on every post you write.** After drafting a post, run the full humanizer loop (draft → audit → rewrite) on the prose before saving the file. Operate in **file mode**: rewrite the file in place and report a short summary of what changed rather than pasting the whole rewrite back. Leave YAML frontmatter, code blocks, and link targets untouched.
+These two skills replace the former `.cursor/commands/post.new.md` and `.cursor/commands/linkedin.new.md` slash commands. Prefer them over improvising format from old posts or memory.

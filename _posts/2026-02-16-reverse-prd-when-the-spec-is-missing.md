@@ -35,7 +35,7 @@ The rule is: this slice of the codebase is covered by one or more artifacts. The
 
 Reverse PRD gets you to a spec when you did not have one. Enforcement and ownership keep it alive. Those are two phases. First you recover the contract from the product. Then you run the process that keeps the contract and the code aligned.
 
-The literature has related ideas: reverse requirements engineering, Martin Fowler’s "From Black Box to Blueprint," and tools that extract documentation or specs from code. The twist here is to treat the recovered artifact explicitly as the PRD—the single source of truth for that area—and to back it with rules that fail the build when the spec falls behind. The spec is not a byproduct of the code. The code is the implementation of the spec. When the spec was lost, we reverse it. Once we have it, we enforce it.
+The literature has related ideas: reverse requirements engineering, [Martin Fowler](https://grokipedia.com/page/Martin_Fowler_%28software_engineer%29)'s "From Black Box to Blueprint," and tools that extract documentation or specs from code. The twist here is to treat the recovered artifact explicitly as the PRD—the single source of truth for that area—and to back it with rules that fail the build when the spec falls behind. The spec is not a byproduct of the code. The code is the implementation of the spec. When the spec was lost, we reverse it. Once we have it, we enforce it.
 
 ## Start where it hurts
 

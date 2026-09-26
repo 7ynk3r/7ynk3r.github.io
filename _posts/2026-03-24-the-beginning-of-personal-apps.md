@@ -5,7 +5,7 @@ date: 2026-03-24
 description: "AI agents are replacing collections of consumer apps with software built for your specific life—and the economics finally make this possible for everyone."
 ---
 
-Andrej Karpathy wanted to control his smart home. Lights, HVAC, pool, spa, security cameras, audio. Six different apps from six different vendors, each with its own interface, its own login, its own idea of what "automation" means. The normal solution is to accept the friction. The new solution is to build something better in an afternoon.
+[Andrej Karpathy](https://grokipedia.com/page/Andrej_Karpathy) wanted to control his smart home. Lights, HVAC, pool, spa, security cameras, audio. Six different apps from six different vendors, each with its own interface, its own login, its own idea of what "automation" means. The normal solution is to accept the friction. The new solution is to build something better in an afternoon.
 
 He called it Dobby. A single WhatsApp-accessible agent that scanned his wireless network, found every connected device, and unified control behind a conversational interface he already used. Six apps became one. The interface became language. The friction became almost nothing.
 
@@ -21,7 +21,7 @@ Karpathy framed this moment clearly. We are moving from Software 1.0—code writ
 
 ## Vibe Coding Changes the Math
 
-The term Karpathy coined in early 2025 is telling: vibe coding. You describe what you want and get working software. Not a prototype. Not a rough approximation. Working software. He built iOS apps without knowing Swift. He built a restaurant menu image generator, MenuGen, in hours rather than the weeks a traditional developer would need.
+The term Karpathy coined in early 2025 is telling: [vibe coding](https://grokipedia.com/page/Vibe_coding). You describe what you want and get working software. Not a prototype. Not a rough approximation. Working software. He built iOS apps without knowing Swift. He built a restaurant menu image generator, MenuGen, in hours rather than the weeks a traditional developer would need.
 
 The actual coding became trivial. The deployment infrastructure remained complex—Google OAuth integrations still require clicking through seventeen configuration screens—but the core act of expressing software in code crossed a threshold. Anyone who can describe what they want clearly enough can get it built.
 

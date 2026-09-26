@@ -5,13 +5,13 @@ date: 2026-05-15
 description: "The DORA 2026 report shows incidents rising sharply alongside AI-driven throughput gains. The dip is not turbulence to endure. It is a diagnostic about which systems in your organization need redesign."
 ---
 
-The DORA 2026 ROI report lands on a finding that should unsettle any team celebrating throughput gains. While AI adoption is correlated with more code-related tasks per team, faster cycle times, and rising individual effectiveness scores, it is also correlated with a sharp increase in software delivery instability. Incidents per pull request are up 242 percent. Monthly incidents are up nearly 60 percent. The change failure rate in their model rises from 5 to 6 percent after adoption.
+The [DORA](https://en.wikipedia.org/wiki/DevOps_Research_and_Assessment) 2026 ROI report lands on a finding that should unsettle any team celebrating throughput gains. While AI adoption is correlated with more code-related tasks per team, faster cycle times, and rising individual effectiveness scores, it is also correlated with a sharp increase in software delivery instability. Incidents per pull request are up 242 percent. Monthly incidents are up nearly 60 percent. The change failure rate in their model rises from 5 to 6 percent after adoption.
 
 These numbers do not cancel the productivity gains. But they do describe an asymmetry that most organizations are not treating seriously enough. The system that generates work is running faster. The system that catches errors is not keeping pace.
 
 ## The J-Curve Is a Diagnostic, Not a Phase
 
-DORA calls the period of initial productivity dip the J-Curve: a temporary regression before long-term gains. Most leaders who encounter this framework treat it as a forecast. Get through the dip, reach the gains. Move fast, absorb the cost, wait for the payoff.
+DORA calls the period of initial productivity dip the [J-Curve](https://grokipedia.com/page/J_curve): a temporary regression before long-term gains. Most leaders who encounter this framework treat it as a forecast. Get through the dip, reach the gains. Move fast, absorb the cost, wait for the payoff.
 
 That reading is wrong in an important way. The dip is not random turbulence. It is a stress signal about specific systems that were designed around assumptions that AI adoption has invalidated. The DORA team identifies three causes: the learning curve as teams adapt their workflows, the verification tax of reviewing AI-generated code, and the downstream strain on testing and change approval systems that were built for lower code volume.
 

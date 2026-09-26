@@ -15,7 +15,7 @@ And the problem is not limited to agent conversations. Any time a human has give
 
 ## Corrections Are Gradient Signals
 
-There is a framework from AI research called Reflexion. The core idea is that instead of updating a model's weights after a failure, you convert the failure into natural language: "I tried X and it did not work because Y. Next time I should do Z." That verbal summary gets stored and injected into the next attempt. The model improves without retraining.
+There is a framework from AI research called [Reflexion](https://grokipedia.com/page/Reflexion). The core idea is that instead of updating a model's weights after a failure, you convert the failure into natural language: "I tried X and it did not work because Y. Next time I should do Z." That verbal summary gets stored and injected into the next attempt. The model improves without retraining.
 
 This is precisely what happens every time a human corrects any output, except most of us are doing it implicitly and throwing the result away. The correction exists only as a mark in a closed review, a message in a conversation that ended, a diff that got merged and forgotten. It does not survive to the next session, the next colleague, the next time someone needs to produce something similar.
 
