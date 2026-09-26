@@ -89,6 +89,8 @@ _posts/YYYY-MM-DD-title-slug.md
 
 Example: `_posts/2025-10-02-why-engineering-teams-are-splitting.md`
 
+The filename date and the frontmatter `date` below must always match.
+
 ### YAML Frontmatter
 
 Every post must start with this exact frontmatter format:
@@ -101,6 +103,8 @@ date: 2025-10-02
 description: "Brief one-sentence description of the post"
 ---
 ```
+
+Scheduling a future-dated post only hides it from the homepage and archive listing (client-side, based on the visitor's local clock). It does not stop the post's own page from building and being reachable at its permalink, and it does not stop it from appearing in the RSS feed. See `AGENTS.md` for the mechanism.
 
 ### Content Guidelines
 
@@ -152,6 +156,8 @@ Based on existing posts, the blog maintains:
 - **Structure**: Clear headings, logical flow, actionable insights
 - **Focus**: Real-world engineering challenges and solutions
 - **Perspective**: Personal experience combined with industry observations
+- **Practical use cases**: Default to enterprise context (regulated, audit-heavy, at-scale orgs). Don't say "enterprise" repeatedly to signal this, it's assumed given the audience; just write the use cases with that context in mind.
+- **Structural alternatives**: When asked for multiple structural rewrites of a post, write each as its own file in `_posts/` (same date, distinct slug) instead of only pasting drafts in chat, so they can be diffed and deleted directly.
 
 Review existing posts in `_posts/` to understand the style better.
 
