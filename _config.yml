@@ -4,6 +4,7 @@ author: Juan Rodriguez
 email: hello@7ynk3r.github.io
 url: "https://7ynk3r.github.io"
 baseurl: ""
+google_analytics: G-Z6ZSF8NB2Z
 
 # Build settings
 future: true
