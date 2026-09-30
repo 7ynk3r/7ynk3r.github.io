@@ -16,6 +16,7 @@ Site is served at `http://localhost:4000`. Jekyll has built-in live-reload via `
 - **No linter / test suite**: This project has no automated tests or lint configuration. Validation is done by building the site (`bundle exec jekyll build`) and visually reviewing.
 - **Gemfile duplicates**: The `Gemfile` lists `jekyll-feed` and `jekyll-seo-tag` twice (top-level and inside `:jekyll_plugins` group). Bundler warns but works fine.
 - **System Ruby**: Ubuntu 24.04 system Ruby 3.2 is used. No `.ruby-version` or version manager needed.
+- **Publish on Mondays**: New posts are dated for the next Monday, not the day they are drafted. Filename date and frontmatter `date` must match. A post dated ahead of the visitor's local clock is hidden from the homepage and archive by the client-side check below, and is still reachable at its permalink.
 - **Future-dated posts are not hidden at build time**: `_config.yml` sets `future: true`, so a post dated ahead builds and is reachable at its permalink, and `jekyll-feed` includes it, immediately on deploy. The only gating is client-side JS in `_layouts/default.html` that hides `article[data-pubdate]` entries on `index.md`/`archive.md` based on the visitor's local clock. Scheduling a post only delays it from those two listing pages, not from direct access, search engines, or the feed.
 
 ### Skills

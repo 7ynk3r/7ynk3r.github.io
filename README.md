@@ -156,6 +156,7 @@ Based on existing posts, the blog maintains:
 - **Structure**: Clear headings, logical flow, actionable insights
 - **Focus**: Real-world engineering challenges and solutions
 - **Perspective**: Personal experience combined with industry observations
+- **Publish on Mondays**: Date new posts for the next Monday. The filename date and the frontmatter `date` are that Monday, not the day the draft was written, unless a different date was explicitly requested.
 - **Practical use cases**: Default to enterprise context (regulated, audit-heavy, at-scale orgs). Don't say "enterprise" repeatedly to signal this, it's assumed given the audience; just write the use cases with that context in mind.
 - **Structural alternatives**: When asked for multiple structural rewrites of a post, write each as its own file in `_posts/` (same date, distinct slug) instead of only pasting drafts in chat, so they can be diffed and deleted directly.
 
