@@ -55,7 +55,7 @@ only and should. One call asks both:
     },
     "reversible": {
       "type": "noul",
-      "instructions": "Can this command be undone without restoring from backup?"
+      "instructions": "Can this be undone without a backup?"
     }
   }
 }
@@ -126,7 +126,7 @@ of them:
   "questions": {
     "signatures": {
       "type": "score",
-      "instructions": "How relevant is a passage about verifying webhook signatures against the raw body and the signing secret?",
+      "instructions": "How relevant is a passage on verifying webhook signatures?",
       "criteria": [
         "unrelated",
         "mentions the area and does not answer",
@@ -136,7 +136,7 @@ of them:
     },
     "http_overview": {
       "type": "score",
-      "instructions": "How relevant is a generic page about HTTP status codes?",
+      "instructions": "How relevant is a generic HTTP status-code page?",
       "criteria": [
         "unrelated",
         "mentions the area and does not answer",
