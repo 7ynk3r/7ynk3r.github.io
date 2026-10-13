@@ -193,6 +193,28 @@ main li {
     border-radius: 4px;
 }
 
+.post-content .highlighter-rouge,
+.post-content pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.post-content pre {
+    margin: 0 0 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background-color: #f1f3f5;
+    border-radius: 6px;
+}
+
+.post-content pre code {
+    background: none;
+    color: #24292e;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.82rem;
+    white-space: pre;
+}
+
 .post-content a {
     color: #007bff;
     text-decoration: none;

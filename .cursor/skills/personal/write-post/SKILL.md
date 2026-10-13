@@ -14,8 +14,11 @@ Converted from the old `.cursor/commands/post.new.md` slash command.
 
 ## Steps
 
-1. **Get today's date** in `YYYY-MM-DD` format, day of week, and month/day
-   (e.g. "Monday, October 2"), unless the user gave a different target date.
+1. **Date the post for a Monday.** This blog publishes on Mondays. Use the
+   next Monday in `YYYY-MM-DD` (and the day of week, e.g. "Monday, October
+   5"), unless the user gave a different target date. Do not use the day you
+   are writing when that day is not a Monday. Filename date and frontmatter
+   `date` must match that Monday.
 
 2. **Read context**:
    - Read `about.md` for the blog's focus and author style.
