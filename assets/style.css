@@ -415,3 +415,24 @@ footer {
         margin: 0.75rem 0 1.5rem 0;
     }
 } 
+/* Post figures (diagrams) */
+.post-content figure {
+    margin: 2rem 0;
+}
+
+.post-content figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.post-content figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+    text-align: center;
+}
